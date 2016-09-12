@@ -7,4 +7,10 @@ object P03 {
       throw new NoSuchElementException
     }
 
+  def recursiveNth[A](index: Int, list: List[A]): A = (index, list) match {
+    case (0, element :: _) => element
+    case (idx, _ :: tail) => recursiveNth(idx - 1, tail)
+    case _ => throw new NoSuchElementException
+  }
+
 }
