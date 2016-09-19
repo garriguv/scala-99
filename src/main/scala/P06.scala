@@ -20,4 +20,8 @@ object P06 {
     }
   }
 
+  def notRidiculousIsPalindrome[A](list: List[A]): Boolean = {
+    list == P05.reverse(list)
+  }
+
 }
