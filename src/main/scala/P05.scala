@@ -6,5 +6,6 @@ object P05 {
     case Nil => reverse
   }
 
-  def hipsterReverse[A](list: List[A], reverse: List[A] = List.empty): List[A] = (List[A]() /: list)( (a, b) => b :: a )
+  def hipsterReverse[A](list: List[A], reverse: List[A] = List.empty): List[A] =
+    (List[A]() /: list)( (theList, element) => element :: theList )
 }
