@@ -36,4 +36,22 @@ class P05Spec extends UnitSpec {
     P05.recursiveReverse(list) should be (List(42))
   }
 
+  "hipsterReverse" should "reverse a list" in {
+    val list = List(1, 1, 2, 3, 5, 8)
+
+    P05.hipsterReverse(list) should be (List(8, 5, 3, 2, 1, 1))
+  }
+
+  "hipsterReverse" should "reverse an empty list" in {
+    val list = List.empty
+
+    P05.hipsterReverse(list) should be (List.empty)
+  }
+
+  "hipsterReverse" should "reverse a list with one element" in {
+    val list = List(42)
+
+    P05.hipsterReverse(list) should be (List(42))
+  }
+
 }
