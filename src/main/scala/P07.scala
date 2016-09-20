@@ -6,4 +6,9 @@ object P07 {
     case Nil => List.empty
   }
 
+  def flatMapFlatten(list: List[Any]): List[Any] = list flatMap {
+    case list: List[_] => flatMapFlatten(list)
+    case element => List(element)
+  }
+
 }
